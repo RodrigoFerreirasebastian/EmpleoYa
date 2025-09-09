@@ -1,1 +1,11 @@
-"# Sistema/IDE .vscode/ .idea/ .DS_Store Thumbs.db" 
+# Sistema/IDE
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Dependencias y cache comunes
+vendor/
+node_modules/
+*.log
+.env

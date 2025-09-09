@@ -1,0 +1,106 @@
+* {
+
+}
+body{
+    background-image: url(/imagenes/fondo.jpg);
+    margin: 0px;
+}
+/* Barra de navegación */
+.barra-navegacion {
+    display: flex;
+    align-items:center;
+    font-size: 30px;
+    background-color: white;
+    
+}
+
+.logo div {
+    display: flex;
+    align-items: center;
+    margin: 50px;
+}
+.logo img {
+    height: 150px;
+    width: 150px;
+}
+
+a{
+    margin-right: 150px;
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    transition: 0,5s;
+    color: rgba(0, 0, 0, 0.62);
+}
+.links-navegacion{
+    margin-left: 490px;
+}    
+.link-navegacion a:hover {
+
+
+}
+
+.botones-login {
+    margin-left: 300px;
+    height: 50px;
+    width: 50px;
+    display: inline-flex;
+}
+.btn-login, .btn-cv {
+    margin: 5px;
+
+}
+.btn-login:hover {
+    
+}
+.btn-cv {
+    
+}
+.btn-cv:hover {
+
+}
+
+.contenido-fondo h1 {
+display: flex;
+justify-content: center;
+
+}
+.contenido-fondo p {
+    display: flex;
+    justify-content: center;
+
+}
+.barra-busqueda {
+    margin-top: 15vw;
+    display:flex;
+    justify-content: center;
+    width: 100vw;
+
+}
+.barra-busqueda input {
+    margin-right: 10px;
+    width: 520px;
+    height: auto;
+}
+.barra-busqueda button {
+    
+}
+.barra-busqueda button:hover {
+    
+}
+
+/* Contenido */
+.contenido {
+
+}
+.contenido h2 {
+    display: flex;
+    justify-content: center;
+    
+
+}
+.contenido p {
+    display: flex;
+    justify-content: center;
+}

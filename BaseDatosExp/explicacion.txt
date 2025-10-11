@@ -1,0 +1,4 @@
+crear base de datos con el nombre empleaya
+despues use y importe esta carpeta 
+Create databases empleaya;
+use databases empleaya;

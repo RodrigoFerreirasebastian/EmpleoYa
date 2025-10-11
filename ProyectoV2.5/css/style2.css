@@ -1,0 +1,83 @@
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 150px;
+    width: 150px;
+}
+
+.inputs-busqueda {
+    margin-left: 50px;
+    display: flex;
+    width: 100px;
+    height: 40px;
+}
+
+.Login-CV {
+    margin-left: 700px;
+}
+.btn-login, .btn-cv {
+    margin: 5px;
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(0, 123, 255);
+    color: white;
+    font-weight: bold;
+}
+.inputs-busqueda input {
+    margin: 10px;
+    padding: 5px;
+}
+.buttonb {
+    height: 40px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(0, 123, 255);
+    color: white;
+    font-weight: bold;
+}
+.tablas-ofertas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    margin: 20px;
+    gap: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: vertical;
+}
+th{
+    background-color: #fff;
+    border: 1px solid #008cff;
+    border-radius: 10px;
+    padding: 16px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+th:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+th-header {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.T{font-size: 18px;
+    margin: 5px 0;
+    color: #222;
+}
+.E{font-size: 15px;
+    color: #0078d7;
+    margin-bottom: 4px;
+}
+.U{ color: #444;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.F{ font-size: 13px;
+    color: #777;
+}

@@ -1,0 +1,124 @@
+
+body{
+    background-image: url(../fondo/fondo.png);
+    margin: 0px;
+}
+
+.barra-navegacion {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.966);
+    font-size: 15px;
+    text-decoration: none;
+}
+.logo img {
+    height: 150px;
+    width: 150px;
+}
+
+a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: inline-flex;
+    margin-left: 20px;
+}
+.link-1{
+    margin-right: 20px;
+    color: rgb(255, 81, 0);
+    border-radius: 5px;
+}
+.link-2{
+    margin-right: 20px;
+    color: rgb(255, 174, 0);
+}
+.link-3{
+    margin-right: -140px;
+    top:50px;
+    color: rgb(0, 123, 255)
+}
+.link-4{
+    width: 20px;
+    margin-right: -32px;
+    color: rgb(100, 0, 182);
+}
+.link-5{
+    width: 20px;
+    margin-left: 120px;
+    color: rgb(54, 0, 116)
+}
+.link2{
+    position: absolute;
+    margin-top: 90px;
+    margin-left: 170px;
+}
+a:hover{
+    text-decoration: none;
+    transition: 0,5s;
+    color: rgba(0, 0, 0, 0.62);
+}
+.link-navegacion {
+    margin-left: 20px;
+    margin-top: 60px;
+    text-decoration: none;
+    color: #000;
+}
+.botones-login {
+    margin-left: 300px;
+    margin-top: 40px;
+}
+.btn-login, .btn-cv {
+    margin-left: 500px;
+    margin: 5px;
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(0, 123, 255);
+    color: white;
+    font-weight: bold;
+}
+
+.contenido-fondo h1 {
+display: flex;
+justify-content: center;
+
+}
+.contenido-fondo p {
+    display: flex;
+    justify-content: center;
+
+}
+.barra-busqueda {
+    margin-top: 15vw;
+    display:flex;
+    justify-content: center;
+    width: 100vw;
+
+}
+.barra-busqueda input {
+    margin-right: 10px;
+    width: 520px;
+    height: auto;
+}
+.barra-busqueda button {
+    
+}
+.barra-busqueda button:hover {
+    
+}
+
+
+.contenido {
+
+}
+.contenido h2 {
+    display: flex;
+    justify-content: center;
+    
+
+}
+.contenido p {
+    display: flex;
+    justify-content: center;
+}

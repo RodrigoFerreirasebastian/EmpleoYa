@@ -7,15 +7,15 @@ $mensaje = '';
   if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         
-        $email = $conn->real_escape_string($_POST["email"] ?? '');
-        $cedula = $conn->real_escape_string($_POST["cedula"] ?? ''); // cedula es la contraseña
-
+        
+    $email = $_POST['email'];
+    $cedula = $_POST['cedula'];
         loginUsuario($email, $cedula);
 
   }
 
 
-$conn->close();
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -33,8 +33,8 @@ $conn->close();
     <label>Email de registro:</label>
     <input type="email" name="email" required><br>
 
-    <label>Cédula:</label>
-    <input type="text" name="cedula" required><br> 
+    <label>Contraseña:</label>
+    <input type="password" name="cedula" required><br> 
 
     <button type="submit">Ingresar</button>
   </form>

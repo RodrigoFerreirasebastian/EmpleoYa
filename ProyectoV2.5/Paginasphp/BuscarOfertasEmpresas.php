@@ -1,14 +1,6 @@
 <?php
-include "../conexion/conexion.php"; 
-
-
-$sql = "SELECT titulo, tipo_trabajo, salario, email_contacto, descripcion 
-        FROM oferta ORDER BY id_oferta DESC";
-$result = $conn->query($sql);
-
-if (!$result) {
-    die("Error al consultar oferta: " . $conn->error);
-}
+require_once __DIR__ . "/../conexion/conexion.php"; 
+require_once __DIR__ . "/aplicacion/servicios/ServicioOfertas.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,32 +32,34 @@ if (!$result) {
     <thead>
     <tr class="tablas-ofertas-empresas">
         <th class="T">Título</th>
+        <th class="N">Nombre</th>
         <th class="E">Tipo de Trabajo</th>
         <th class="U">Salario</th>
         <th class="C">Contacto</th>
         <th class="D">Descripción</th>
         <th class="A">Acción</th>
+    
     </tr>
     </thead>
     <tbody>
-    <?php 
-    if ($result->num_rows > 0) {
-        while($oferta = $result->fetch_assoc()) {
-            echo "<tr>";
-            echo "<td>" . htmlspecialchars($oferta['titulo']) . "</td>";
-            echo "<td>" . htmlspecialchars($oferta['tipo_trabajo']) . "</td>";
-            // Formatear salario
-            echo "<td>" . ($oferta['salario'] ? "$" . number_format($oferta['salario'], 2, ',', '.') : "No especificado") . "</td>";
-            echo "<td>" . htmlspecialchars($oferta['email_contacto']) . "</td>";
-            echo "<td>" . htmlspecialchars($oferta['descripcion']) . "</td>";
-            echo "<td><button class='btn-aplicar'>Aplicar</button></td>";
-            echo "</tr>";
-        }
-    } else {
-        echo "<tr><td colspan='6'>No hay ofertas de trabajo disponibles.</td></tr>";
-    }
+    
+<?php
+$datos = new ServicioOfertas();
+$result = $datos->buscarOfertasEmpresas();
+foreach($result as $oferta){
+    echo "<tr>";
+    echo "<td>".$oferta['titulo']."</td>";
+    echo "<td>".$oferta['nombre']."</td>";
+    echo "<td>".$oferta['tipo_trabajo']."</td>";
+    echo "<td>".$oferta['salario']."</td>";
+    echo "<td>".$oferta['email_contacto']."</td>";
+    echo "<td>".$oferta['descripcion']."</td>";
+    echo "<td><a href='FormularioPostulacionEmp.php?id_oferta=".$oferta['id_oferta']."'>Aplicar</a></td>";
+    echo "</tr>";
+}
     $conn->close();
-    ?>
+?>
+
     </tbody>
 </table>
 </body>

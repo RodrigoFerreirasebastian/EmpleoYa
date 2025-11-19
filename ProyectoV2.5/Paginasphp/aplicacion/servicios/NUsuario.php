@@ -1,6 +1,6 @@
 <?php
 
-include "../persistencia/DaoUsuario.php";
+include "./aplicacion/persistencia/DaoUsuario.php";
 
 class NUsuario {
 
@@ -9,17 +9,14 @@ class NUsuario {
         $usuario = $dao->obtenerUsuario($email, $clave);  
         
         if ($usuario !== null) {
-            $fila = $resultado->fetch_assoc();
             $_SESSION['id_cv'] = $usuario['id_cv'];
             $_SESSION['nombre'] = $usuario['nombre'];
             $_SESSION['email'] = $usuario['email'];
-            return "Inicio de sesión exitoso. ¡Bienvenido, " . $usuario['nombre'] . "!";
+            $usuarioV = true;
         } else {
-            return "Error: Credenciales inválidas.";
-        }   
-
-        
-
+            $usuarioV = false;
+        }
+        return $usuarioV;
     }
 
 

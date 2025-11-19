@@ -26,7 +26,14 @@ if ($esta_logueado) {
 if (isset($conn)) {
     $conn->close();
 }
+
 ?>
+<?php
+if(isset ($_SESSION["nombre"]) ){
+    echo $_SESSION["nombre"];  
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -51,13 +58,19 @@ if (isset($conn)) {
             <a class="link-5" href="Paginasphp/PersonalPublic.php" type="target_blank">Publicar oferta personas</a>
         </div>
         <div class="botones-login">
-            <button class="btn-login"><a href="Paginasphp/login.php" type="target_blank">Login</a></button>
+            <?php if (!isset($_SESSION["nombre"])) { ?>
+                <button class="btn-login"><a href="Paginasphp/login.php" type="target_blank">Login</a></button>
+            <?php } ?>
             <button class="btn-cv"><a href="Paginasphp/CrearCV.php" type="target_blank">Crear CV</a></button>
+        <?php if (isset($_SESSION["nombre"])) { ?>
+            <?php echo "Hola " . $_SESSION["nombre"]; ?> 
+            (<a href="Paginasphp/logout.php" >logout</a>)
+            <?php } ?>
         </div>
 
-        <?php echo $_SESSION["nombre"] ?
-    </div>
-        </header>
+        
+        </div>
+    </header>
         
     <section class="fondo">
         <div class="contenido-fondo">

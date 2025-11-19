@@ -1,90 +1,139 @@
-.logo {
-    display: flex;
-    align-items: center;
-}
-.logo img{
-    height: 150px;
-    width: 150px;
-}
 
-.inputs-busqueda {
-    margin-left: 50px;
-    display: flex;
-    width: 100px;
-    height: 40px;
-}
-
-.Login-CV {
-    margin-left: 700px;
-}
-.btn-login, .btn-cv {
-    margin: 5px;
-    height: 40px;
-    width: 100px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(0, 123, 255);
-    color: white;
-    font-weight: bold;
-}
-.inputs-busqueda input {
-    margin: 10px;
-    padding: 5px;
-}
-.buttonb {
-    height: 40px;
-    width: 200px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(0, 123, 255);
-    color: white;
-    font-weight: bold;
-}
-.tablas-ofertas {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    margin: 20px;
-    gap: 20px;
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 10px;
-    text-align: vertical;
-}
-th{
-    background-color: #fff;
-    border: 1px solid #008cff;
-    border-radius: 10px;
-    padding: 16px 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-th:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-th-header {
-    font-size: 14px;
-    margin-bottom: 8px;
-}
-.N{font-size: 18px;
-    margin: 5px 0;
+body {
+    background: #eef2f7;
+    font-family: "Segoe UI", Tahoma, sans-serif;
     color: #222;
 }
-.T{font-size: 18px;
-    margin: 5px 0;
+
+
+h1 {
+    margin-top: 40px;
+    text-align: center;
+    color: #ff9800;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.table-container {
+    width: 90%;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 18px;
+    margin-top: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+
+thead th {
+    background: #f3f7ff;
+    color: #005fcc;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 3px solid #cfe2ff;
+    text-align: left;
+    letter-spacing: 0.3px;
+}
+tbody tr {
+    background: white;
+    transition: 0.25s ease;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9fbff;
+}
+
+
+tbody tr:hover {
+    background: #eef6ff;
+    transform: scale(1.01);
+}
+
+
+td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #e3e9f2;
+    vertical-align: top;
+    line-height: 1.4;
+}
+
+
+
+td.titulo {
+    font-weight: 600;
+}
+
+td.nombre {
+    font-weight: bold;
+    font-size: 16px;
     color: #222;
 }
-.E{font-size: 15px;
-    color: #0078d7;
-    margin-bottom: 4px;
+
+td.tipo {
+    font-weight: 600;
+    color: #005fcc;
 }
-.U{ color: #444;
+
+td.contacto {
     font-size: 14px;
-    margin-bottom: 10px;
+    color: #333;
 }
-.F{ font-size: 13px;
-    color: #777;
+
+
+.btn-aplicar {
+    background: #006dff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease;
+    display: inline-block;
 }
-a{
-    margin-left: 50px;
+
+.btn-aplicar:hover {
+    background: #0050c8;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+
+@media (max-width: 900px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead { 
+        display: none; 
+    }
+
+    tr {
+        margin-bottom: 15px;
+        background: white;
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    td {
+        border: none;
+        padding: 5px 0;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #007bff;
+        display: block;
+        margin-bottom: 3px;
+    }
 }

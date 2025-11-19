@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . "/../../../conexion/conexion.php";
-// include "./dominio/Personas.php";
 
 
 class DaoEmpresas {

@@ -37,12 +37,14 @@ $conn->close();
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <?php include "librerias.php" ?>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crear CV</title>
-  <link rel="stylesheet" href="../css/style3.css">
+  <link rel="stylesheet" href="../css/style5.css">
 </head>
 <body>
+  <?php include "cabezalMin.php" ?>
   <h1>Crear Currículum (CV)</h1>
 
   <?php echo $mensaje; ?>

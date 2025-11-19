@@ -30,7 +30,7 @@ if (isset($conn)) {
 ?>
 <?php
 if(isset ($_SESSION["nombre"]) ){
-    echo $_SESSION["nombre"];  
+
 }
 ?>
 

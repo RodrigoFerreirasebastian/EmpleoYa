@@ -14,4 +14,7 @@ class ServicioEmpresas {
         return $this->dao->obtenerEmpresas();
     }
 
+    public function guardarEvaluacionEmpresa($id_empresa, $calificacion, $comentario) {
+    return $this->dao->guardarCalificacionEmpresa($id_empresa, $calificacion, $comentario);
+    }
 }

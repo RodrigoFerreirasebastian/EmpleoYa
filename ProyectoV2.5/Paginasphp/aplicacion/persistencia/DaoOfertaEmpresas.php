@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . "/../../../conexion/conexion.php";
-// include "./dominio/Personas.php";
+
 class DaoOfertaEmpresas {
     
     
@@ -27,7 +27,7 @@ class DaoOfertaEmpresas {
         }
     }
 
-    return $ofertasempresas; // ← devuelve todas las ofertas como un array de arrays
+    return $ofertasempresas; 
 }
 public function guardarCalificacionEmpresa($id_oferta, $calificacion, $comentario) {
     global $conn;

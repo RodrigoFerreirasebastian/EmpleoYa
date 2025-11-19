@@ -1,0 +1,154 @@
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url(../fondo/fondo.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contenedor-login {
+    width: 85%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+
+.panel-izquierdo {
+    background: rgba(255, 255, 255, 0.75);
+    width: 40%;
+    min-width: 280px;
+    border-radius: 15px;
+    padding: 40px 20px;
+    text-align: center;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.panel-izquierdo h2 {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #ffa600;
+    line-height: 1.2em;
+}
+
+
+form {
+    background: white;
+    padding: 35px 45px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    animation: aparecer 0.6s ease;
+}
+
+
+label {
+    font-weight: bold;
+    color: #414141;
+}
+
+
+input[type="number"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+
+textarea {
+    resize: none;
+    font-family: inherit;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.crear-cv {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    text-align: right;
+    font-size: 14px;
+    color: black;
+}
+
+.crear-cv a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.crear-cv a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 900px) {
+    .contenedor-login {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .panel-izquierdo {
+        width: 90%;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    .crear-cv {
+        top: 10px;
+        right: 10px;
+        font-size: 12px;
+    }
+}

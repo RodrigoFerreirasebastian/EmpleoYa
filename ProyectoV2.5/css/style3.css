@@ -9,14 +9,17 @@ display: flex;
 flex-direction: column;
 align-items: center;
 min-height: 100vh;
+background-image: url(../fondo/fondo.png);
+margin: 0px;
 }
 
 h1 {
 margin-top: 40px;
-color: #ff7f00;
+color: #ffa600;
 text-align: center;
 font-size: 2.2em;
 letter-spacing: 1px;
+background-color: #41414157;
 }
 
 

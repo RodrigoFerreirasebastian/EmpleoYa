@@ -20,12 +20,14 @@ $mensaje = '';
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <?php include "librerias.php" ?>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Iniciar Sesión</title>
-  <link rel="stylesheet" href="../css/style3.css">
+  <link rel="stylesheet" href="../css/style5.css">
 </head>
 <body>
+  <?php include "cabezalMin.php" ?>
   <h1>Iniciar Sesión (Aspirante)</h1>
   <?php echo $mensaje; ?>
 
